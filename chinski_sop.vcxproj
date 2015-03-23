@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sop\initializable.h" />
+    <ClInclude Include="sop\exception.h" />
+    <ClInclude Include="sop\files\exceptions\module_exception.h" />
+    <ClInclude Include="sop\files\module.h" />
+    <ClInclude Include="sop\logger\console_logger.h" />
+    <ClInclude Include="sop\logger\logger.h" />
+    <ClInclude Include="sop\memory\exceptions\module_exception.h" />
+    <ClInclude Include="sop\memory\module.h" />
+    <ClInclude Include="sop\object.h" />
+    <ClInclude Include="sop\processes\class_process.h" />
+    <ClInclude Include="sop\processes\exceptions\module_exception.h" />
+    <ClInclude Include="sop\processes\module.h" />
+    <ClInclude Include="sop\processor\exceptions\module_exception.h" />
+    <ClInclude Include="sop\processor\executive_unit.h" />
+    <ClInclude Include="sop\processor\interpreter.h" />
+    <ClInclude Include="sop\processor\module.h" />
+    <ClInclude Include="sop\processor\processor.h" />
+    <ClInclude Include="sop\processor\scheduler.h" />
+    <ClInclude Include="sop\string_converter.h" />
+    <ClInclude Include="sop\system\exceptions\module_exceptions.h" />
+    <ClInclude Include="sop\system\exceptions\kernel_exceptions.h" />
+    <ClInclude Include="sop\system\module.h" />
+    <ClInclude Include="sop\system\shell.h" />
+    <ClInclude Include="sop\system\kernel.h" />
+    <ClInclude Include="sop\users\exceptions\module_exception.h" />
+    <ClInclude Include="sop\users\module.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sop\initializable.cpp" />
+    <ClCompile Include="sop\exception.cpp" />
+    <ClCompile Include="sop\files\exceptions\module_exception.cpp" />
+    <ClCompile Include="sop\files\module.cpp" />
+    <ClCompile Include="sop\logger\console_logger.cpp" />
+    <ClCompile Include="sop\logger\logger.cpp" />
+    <ClCompile Include="sop\memory\exceptions\module_exception.cpp" />
+    <ClCompile Include="sop\memory\module.cpp" />
+    <ClCompile Include="sop\object.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="sop\processes\exceptions\module_exception.cpp" />
+    <ClCompile Include="sop\processes\module.cpp" />
+    <ClCompile Include="sop\processor\exceptions\module_exception.cpp" />
+    <ClCompile Include="sop\processor\executive_unit.cpp" />
+    <ClCompile Include="sop\processor\interpreter.cpp" />
+    <ClCompile Include="sop\processor\module.cpp" />
+    <ClCompile Include="sop\processor\processor.cpp" />
+    <ClCompile Include="sop\processor\scheduler.cpp" />
+    <ClCompile Include="sop\string_converter.cpp" />
+    <ClCompile Include="sop\system\exceptions\module_exceptions.cpp" />
+    <ClCompile Include="sop\system\exceptions\kernel_exceptions.cpp" />
+    <ClCompile Include="sop\system\module.cpp" />
+    <ClCompile Include="sop\system\shell.cpp" />
+    <ClCompile Include="sop\system\kernel.cpp" />
+    <ClCompile Include="sop\users\exceptions\module_exception.cpp" />
+    <ClCompile Include="sop\users\module.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A7530614-D6A8-4614-BDCA-4ADCEF9E4DDD}</ProjectGuid>
+    <RootNamespace>chinski_sop</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(BOOST_ROOT);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.;$(BOOST_ROOT);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(BOOST_ROOT)\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
